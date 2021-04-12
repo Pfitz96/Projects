@@ -1,0 +1,27 @@
+import random
+
+def get_num():
+    hidden_num = random.randint(1, 1000)
+    return hidden_num
+
+def guess_the_number():
+    number = get_num()
+    print('Pick a number between 1 - 1000...')
+    user_number = 0
+    while user_number != number:
+        user_input = input()
+        if user_input.isdigit():
+            user_number = int(user_input)
+            if user_number == number:
+                print(f'Congrats! You guessed the number chosen by the computer: {number}')
+
+            elif user_number > number:
+                print('The number you choose is too big, try a smaller one!')
+
+            else:
+                print('The number you choose is too small, try a bigger one!')
+        else:
+            print('Please try a number this time!')
+
+guess_the_number()
+
