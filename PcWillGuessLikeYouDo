@@ -1,0 +1,27 @@
+import random
+
+print('Insert a number between 1 - 1000, this script will guess it for sure!')
+chosen_num = int(input())
+pc_min_num = 1
+pc_max_num = 1000
+pc_num = 0
+count = 0
+while pc_num != chosen_num:
+    pc_pick = random.randint(pc_min_num, pc_max_num)
+    pc_num = pc_pick
+    if pc_num < chosen_num:
+        pc_min_num = pc_num
+        count += 1
+        print(f'So {pc_min_num} is too small...')
+    elif pc_num > chosen_num:
+        pc_max_num = pc_num
+        count += 1
+        print(f'So {pc_max_num} is too big...')
+    else:
+        if count < 10:
+            print(f'So {pc_num} is your number? that was easy! ')
+        elif count < 18:
+            print(f'So {pc_num} is your number? it wasn\'t as easy as I expected!')
+        else:
+            print(f'So {pc_num} is your number? that was really hard! ')
+
