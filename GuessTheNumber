@@ -16,10 +16,10 @@ def guess_the_number():
                 print(f'Congrats! You guessed the number chosen by the computer: {number}')
 
             elif user_number > number:
-                print('The number you choose is too big, try a smaller one!')
+                print('The number you chose is too big, try a smaller one!')
 
             else:
-                print('The number you choose is too small, try a bigger one!')
+                print('The number you chose is too small, try a bigger one!')
         else:
             print('Please try a number this time!')
 
